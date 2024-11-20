@@ -9,25 +9,27 @@ import Image from "next/image";
 const Navigation = () => {
   return (
     <Card>
-      <h2 className="text-gray-300 mb-4">Navigation</h2>
-      <a href="" className="flex gap-2 py-3">
-        <Image className="w-1/10" src={home} alt="home" /> Home
-      </a>
-      <a href="" className="flex gap-2 py-3">
-        <Image className="w-1/10" src={friends} alt="friends" /> Friends
-      </a>
-      <a href="" className="flex gap-2 py-3">
-        <Image className="w-1/10" src={notifications} alt="notifications" />
-        Notifications
-      </a>
-      <a href="" className="flex gap-2 py-3">
-        <Image className="w-1/10" src={savedPosts} alt="savedPosts" />
-        Saved Posts
-      </a>
-      <a href="" className="flex gap-2 py-3">
-        <Image className="w-1/10" src={logout} alt="logout" />
-        Logout
-      </a>
+      <div className="px-4 py-2">
+        <h2 className="text-gray-300 mb-4">Navigation</h2>
+        <a href="" className="flex gap-2 py-3">
+          <Image className="w-1/10" src={home} alt="home" /> Home
+        </a>
+        <a href="" className="flex gap-2 py-3">
+          <Image className="w-1/10" src={friends} alt="friends" /> Friends
+        </a>
+        <a href="" className="flex gap-2 py-3">
+          <Image className="w-1/10" src={notifications} alt="notifications" />
+          Notifications
+        </a>
+        <a href="" className="flex gap-2 py-3">
+          <Image className="w-1/10" src={savedPosts} alt="savedPosts" />
+          Saved Posts
+        </a>
+        <a href="" className="flex gap-2 py-3">
+          <Image className="w-1/10" src={logout} alt="logout" />
+          Logout
+        </a>
+      </div>
     </Card>
   );
 };
