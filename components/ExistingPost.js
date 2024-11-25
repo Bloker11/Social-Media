@@ -1,36 +1,43 @@
 import Card from "./Card";
-import heart from "@/public/Heart.svg";
-import comment from "@/public/Comment.svg";
-import share from "@/public/Share.svg";
-import more from "@/public/More.svg";
-import SavedPosts from "@/public/SavedPosts.js";
-import hideEye from "@/public/HideEye.svg";
-import report from "@/public/Report.svg";
-import trashcan from "@/public/Trashcan.svg";
-import turnNotification from "@/public/TurnNotification.svg";
+import heart from "@/public/icons/Heart.svg";
+import comment from "@/public/icons/Comment.svg";
+import share from "@/public/icons/Share.svg";
+import more from "@/public/icons/More.svg";
+import SavedPosts from "@/public/icons/SavedPosts.js";
+import hideEye from "@/public/icons/HideEye.svg";
+import Report from "@/public/icons/Report.js";
+import trashcan from "@/public/icons/Trashcan.svg";
+import turnNotification from "@/public/icons/TurnNotification.svg";
 import Image from "next/image";
 import ClickOutHandler from "react-clickout-handler";
 import { useState } from "react";
 import Link from "next/link";
 
 const ExistingPost = () => {
+  const [dropDown, setDropDown] = useState(false);
 
-  const [dropDown,setDropDown] = useState(false)
-
-  const hoverClass = "flex gap-2 py-3 transition ease-in-out hover:bg-blue-200 -mx-4 px-4 rounded-2xl";
+  const hoverClass =
+    "flex gap-2 py-3 transition ease-in-out hover:bg-blue-200 -mx-4 px-4 rounded-2xl";
 
   return (
     <Card>
-      <div className="flex gap-2">
-        <Link className="w-12 rounded-full  overflow-hidden" href={'/profile'}>
-          <img
-            className=""
-            src="https://images.unsplash.com/photo-1493106819501-66d381c466f1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          />
+      <div className="flex gap-2 mt-3">
+        <Link
+          className="w-12 rounded-full overflow-hidden mb-3 mt-2 ml-3"
+          href={"/profile"}
+        >
+          <div>
+            <img
+              className=""
+              src="https://images.unsplash.com/photo-1577975819014-2d6f1e721e77?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            />
+          </div>
         </Link>
         <div className="flex gap-1 ml-4 flex-col">
           <div className="flex gap-1 mt-3">
-            <Link className="font-bold" href={'/profile'}>John Doe</Link>
+            <Link className="font-bold" href={"/profile"}>
+              John Doe
+            </Link>
             <p>posted</p>
             <span className="text-blue-500 font-bold">album</span>
           </div>
@@ -64,7 +71,7 @@ const ExistingPost = () => {
                   Delete
                 </a>
                 <a href="" className={hoverClass}>
-                  <Image src={report} />
+                  <Report></Report>
                   Report
                 </a>
               </div>
@@ -97,11 +104,13 @@ const ExistingPost = () => {
         </a>
       </div>
       <div className="flex gap-2">
-        <div className="w-12 rounded-full  overflow-hidden">
-          <img
-            className=""
-            src="https://images.unsplash.com/photo-1493106819501-66d381c466f1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          />
+        <div>
+          <div className="w-12 rounded-full overflow-hidden ml-3">
+            <img
+              className=""
+              src="https://images.unsplash.com/photo-1577975819014-2d6f1e721e77?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            />
+          </div>
         </div>
         <textarea
           name=""
